@@ -1,0 +1,7 @@
+use auxiliary/scanner/misc/java_rmi_server
+services -p 1099 -u -R
+set THREADS 15
+spool java_rmi.meter.log
+exploit
+spool off
+exit

@@ -1,0 +1,48 @@
+use auxiliary/scanner/ssh/ssh_version
+services -p 22 -u -R
+setg THREADS 15
+exploit -j -q
+
+use auxiliary/scanner/ftp/ftp_version
+services -p 21 -u -R
+exploit -j -q
+
+use auxiliary/scanner/h323/h323_version
+services -p 1720 -u -R
+exploit -j -q
+
+use auxiliary/scanner/oracle/tnslsnr_version
+services -p 1521 -u -R
+exploit -j -q
+
+use auxiliary/scanner/pcanywhere/pcanywhere_tcp
+services -p 5631 -u -R
+exploit  -j -q
+
+use auxiliary/scanner/smtp/smtp_version
+services -p 25 -u -R
+exploit -j -q
+
+use auxiliary/scanner/telnet/telnet_version
+services -p 23 -u -R
+exploit -j -q
+
+use auxiliary/scanner/vnc/vnc_none_auth
+services -p 5900 -u -R
+exploit -j -q
+
+use auxiliary/scanner/pop3/pop3_version
+services -p 101 -u -R
+exploit -j -q
+
+use auxiliary/scanner/mysql/mysql_version
+services -p 3306 -u -R
+exploit -j -q
+
+use auxiliary/scanner/http/http_version 
+services -p 80 -u -R
+exploit -j -q
+services -p 443 -u -R
+set SSL true
+set rport 443
+exploit -j -q

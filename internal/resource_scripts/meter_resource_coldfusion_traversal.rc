@@ -1,0 +1,7 @@
+use auxiliary/scanner/x11/open_x11
+services -p 6000 -u -R
+set THREADS 15
+spool x11.meter.log
+exploit
+spool off
+exit

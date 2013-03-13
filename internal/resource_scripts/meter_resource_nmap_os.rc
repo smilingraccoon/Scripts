@@ -1,0 +1,7 @@
+db_nmap -vvv -sS -O -iL ./targets.txt --open --max-retries 2 -oA nmap/nmap_scan
+services -p 445 -R
+use auxiliary/scanner/smb/smb_version
+set THREADS 15
+exploit
+hosts -o hosts/targets.csv
+exit

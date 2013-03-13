@@ -1,0 +1,7 @@
+use auxiliary/scanner/vnc/vnc_none_auth
+services -S vnc -u -R
+set THREADS 15
+spool vnc.meter.log
+exploit
+spool off
+exit

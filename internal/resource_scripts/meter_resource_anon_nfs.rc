@@ -1,0 +1,7 @@
+use auxiliary/scanner/nfs/nfsmount
+services -p 111 -u -R
+set THREADS 15
+spool nfs.meter.log
+exploit
+spool off
+exit

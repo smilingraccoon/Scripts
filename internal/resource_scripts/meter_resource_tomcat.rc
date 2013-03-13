@@ -1,0 +1,7 @@
+use auxiliary/scanner/http/tomcat_mgr_login
+services -p 8080 -u -R
+set THREADS 15
+spool tomcat.meter.log
+exploit
+spool off
+exit

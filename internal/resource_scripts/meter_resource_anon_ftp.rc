@@ -1,0 +1,4 @@
+use auxiliary/scanner/ftp/anonymous
+services -S ftp -u -R
+set THREADS 15
+run

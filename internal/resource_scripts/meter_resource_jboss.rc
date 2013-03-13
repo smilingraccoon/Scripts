@@ -1,0 +1,7 @@
+use auxiliary/scanner/http/jboss_vulnscan
+services -p 80 -u -R
+set THREADS 15
+spool j_boss.meter.log
+exploit
+spool off
+exit
